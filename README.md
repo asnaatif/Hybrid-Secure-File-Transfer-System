@@ -112,26 +112,34 @@ pip install pycryptodome
 ### Command Line Interface
 
 #### Sender Termial 
+ ```bash
 1. cd "Hybrid Secure File Transfer System/Project"
 2. python3 -m venv venv
 3. source venv/bin/activate
 4. pip install pycryptodome or use, python3 -m pip install pycryptodome
 5. python3 sender_disk_test.py
+ ```
 
 
 #### Receiver Terminal
+```bash
 1. cd "Hybrid Secure File Transfer System/Project"
 2. python3 -m venv venv
 3. source venv/bin/activate
 4. python3 socket_receiver.py --port 5001 --privkey receiver_private.pem
+ ```
 
 #### Sender Termial 
+```bash
 6. python3 gui.py
 7. Select & send example_sample.txt.
+ ```
 
 #### Receiver Terminal
+```bash
 5. python3 receiver_disk_test.py
 6. Check decrypted_example_sample.txt file, this will contain your message.
+ ```
 
 <!-- ### Graphical User Interface
 
