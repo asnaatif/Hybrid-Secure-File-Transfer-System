@@ -102,7 +102,7 @@ pip install pycryptodome
    ```
    This creates `receiver_private.pem` (keep secret) and `receiver_public.pem` (share with sender).
 
-4. **Run tests to verify setup**:
+4. **Run tests to verify setup (Optional)**:
    ```bash
    python tests/test_crypto_roundtrip.py
    ```
@@ -111,25 +111,29 @@ pip install pycryptodome
 
 ### Command Line Interface
 
-#### Sender
-1. cd Hybrid Secure File Transfer System 
+#### Sender Termial 
+1. cd "Hybrid Secure File Transfer System/Project"
+2. python3 -m venv venv
+3. source venv/bin/activate
+4. pip install pycryptodome or use, python3 -m pip install pycryptodome
+5. python3 sender_disk_test.py
 
-Example:
-```bash
-python socket_sender.py --ip 127.0.0.1 --port 5001 --pubkey receiver_public.pem --file tests/samples/example_sample.txt
-```
 
-#### Receiver
-```bash
-python socket_receiver.py --port <port> --privkey <receiver_private.pem>
-```
+#### Receiver Terminal
+1. cd "Hybrid Secure File Transfer System/Project"
+2. python3 -m venv venv
+3. source venv/bin/activate
+4. python3 socket_receiver.py --port 5001 --privkey receiver_private.pem
 
-Example:
-```bash
-python socket_receiver.py --port 5001 --privkey receiver_private.pem
-```
+#### Sender Termial 
+6. python3 gui.py
+7. Select & send example_sample.txt.
 
-### Graphical User Interface
+#### Receiver Terminal
+5. python3 receiver_disk_test.py
+6. Check decrypted_example_sample.txt file, this will contain your message.
+
+<!-- ### Graphical User Interface
 
 1. Start the receiver:
    ```bash
@@ -145,14 +149,14 @@ python socket_receiver.py --port 5001 --privkey receiver_private.pem
    - Browse and select a file
    - Enter receiver IP and port (defaults provided)
    - Specify receiver's public key path
-   - Click Send
+   - Click Send -->
 
-### Demo
+<!-- ### Demo
 
 Run the example usage script to see a local roundtrip demonstration:
 ```bash
 python example_usage.py
-```
+``` -->
 
 ## API Reference
 
@@ -200,7 +204,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Authors
 
-- Muhammad Abdullah and team members
+- Saadan Ahmed, Muhammad Abdullah, Asna Atif, Fajar Hayat
 
 ## Acknowledgments
 
