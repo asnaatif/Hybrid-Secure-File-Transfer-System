@@ -1,4 +1,4 @@
-# Hybrid Secure File Transfer — Cryptography Module (Member 1)
+<!-- # Hybrid Secure File Transfer — Cryptography Module (Member 1)
 
 ## Setup
 1. Install dependencies:
@@ -55,4 +55,4 @@ When sending over socket, send data in EXACT order:
 
 4. In GUI, browse example_sample.txt & select it.
 
-5. python3 receiver_disk_test.py (terminal 2)
+5. python3 receiver_disk_test.py (terminal 2) -->
